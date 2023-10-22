@@ -16,11 +16,18 @@ struct ContentView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .scaledToFit()
-                .position(x: 187.5, y: 110)
             Menu("Filter") {
                 Text("BADGE")
                 Text("PRICE")
                 Text("DISTANCE")
+            }
+            List {
+                Text("First Row")
+                Text("Second Row")
+                Text("Third Row")
+                Text("First Row")
+                Text("Second Row")
+                Text("Third Row")
             }
         }
       
