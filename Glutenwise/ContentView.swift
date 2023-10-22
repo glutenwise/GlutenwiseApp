@@ -23,6 +23,24 @@ struct ContentView: View {
                 Text("DISTANCE")
             }
         }
+      
+        ScrollViewReader { proxy in
+            Text("Glutenwise")
+                .font(.largeTitle)
+                .fontWeight(.ultraLight)
+                .position(x: 175, y: 10)
+            ZStack {
+                Image("food1Image")
+                    .resizable()
+                    .frame(width: 400, height: 450)
+                    .position(x: 180, y: -60)
+                Text("Grilled Chicken with Asparagus and Quinoa")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.white)
+                    .position(x: 160, y: 110)
+            }
+        }
     }
 }
 
