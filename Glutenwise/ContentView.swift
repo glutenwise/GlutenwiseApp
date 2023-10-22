@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/** Restaurant struct with attributes about a restaurant. **/
 struct Restaurant: Identifiable {
     let id = UUID()
     var name: String
@@ -17,6 +18,7 @@ struct Restaurant: Identifiable {
     var rating: Double // a scale from 1 to 5, worst to best overall
 }
 
+/** BadgeType is an enum that describes badges and their respective gluten-free friendliness. **/
 enum BadgeType: String, CaseIterable {
     case blue = "blueBadge"
     case green = "greenBadge"
@@ -24,6 +26,7 @@ enum BadgeType: String, CaseIterable {
     case red = "redBadge"
 }
 
+/** Restaurants is a constant that defines many different restaurants with various attribute values. **/
 let restaurants: [Restaurant] = [
     Restaurant(name: "Pasta Paradise", cuisine: "Italian", price: 2, badge: .red, address: "123 Main St", rating: 4.5),
     Restaurant(name: "Taco Tango", cuisine: "Mexican", price: 3, badge: .green, address: "456 Elm St", rating: 4.2),
@@ -37,6 +40,44 @@ let restaurants: [Restaurant] = [
     Restaurant(name: "The Steakhouse Grill", cuisine: "Steakhouse", price: 3, badge: .blue, address: "707 Maple Blvd", rating: 4.3)
 ]
 
+/** RestaurantRow formats how a row should look for a particular restaurant. **/
+struct RestaurantRow: View {
+    let restaurant: Restaurant
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            // First Line: Restaurant Name and Badge
+            HStack {
+                Text(restaurant.name)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+                Image(restaurant.badge.rawValue)
+                    .resizable()
+                    .frame(width: 30, height: 30)
+            }
+            
+            // Second Line: Cuisine, Price, and Rating
+            HStack {
+                Text("Cuisine: \(restaurant.cuisine)")
+                    .font(.subheadline)
+                Spacer()
+                Text("Price: \(String(repeating: "$", count: restaurant.price))")
+                    .font(.subheadline)
+                Spacer()
+                Text("Rating: \(String(format: "%.1f", restaurant.rating))")
+                    .font(.subheadline)
+            }
+            
+            // Third Line: Address
+            Text("Address: \(restaurant.address)")
+                .font(.subheadline)
+        }
+        .padding(8)
+    }
+}
+
+/** ContentView is the content that is shown, including logo, restaurant banner, filter, and list of restaurants. **/
 struct ContentView: View {
     var body: some View {
         
@@ -52,16 +93,12 @@ struct ContentView: View {
             }
             List {
                 ForEach(restaurants) { r in
-                    HStack {
-                        Image(r.badge.rawValue)
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                        Text(r.name)
-                    }
+                    RestaurantRow(restaurant: r)
                 }
             }
         }
-      
+
+        
         ScrollViewReader { proxy in
             Text("Glutenwise")
                 .font(.largeTitle)
