@@ -25,16 +25,16 @@ enum BadgeType: String, CaseIterable {
 }
 
 let restaurants: [Restaurant] = [
-    Restaurant(name: "Pasta Paradise", cuisine: "Italian", price: 2, badge: .blue, address: "123 Main St", rating: 4.5),
+    Restaurant(name: "Pasta Paradise", cuisine: "Italian", price: 2, badge: .red, address: "123 Main St", rating: 4.5),
     Restaurant(name: "Taco Tango", cuisine: "Mexican", price: 3, badge: .green, address: "456 Elm St", rating: 4.2),
     Restaurant(name: "Sushi Sensation", cuisine: "Japanese", price: 1, badge: .yellow, address: "789 Oak St", rating: 4.8),
-    Restaurant(name: "Spicy Curry House", cuisine: "Indian", price: 2, badge: .red, address: "101 Pine Ave", rating: 4.0),
-    Restaurant(name: "Chopsticks & Noodles", cuisine: "Chinese", price: 3, badge: .blue, address: "202 Maple Ave", rating: 4.7),
+    Restaurant(name: "Spicy Curry House", cuisine: "Indian", price: 2, badge: .green, address: "101 Pine Ave", rating: 4.0),
+    Restaurant(name: "Chopsticks & Noodles", cuisine: "Chinese", price: 3, badge: .yellow, address: "202 Maple Ave", rating: 4.7),
     Restaurant(name: "Mediterranean Delights", cuisine: "Mediterranean", price: 1, badge: .green, address: "303 Cedar Rd", rating: 4.6),
-    Restaurant(name: "La Baguette Bistro", cuisine: "French", price: 2, badge: .yellow, address: "404 Oak Ln", rating: 4.4),
-    Restaurant(name: "Thai Spice Haven", cuisine: "Thai", price: 1, badge: .red, address: "505 Pine Dr", rating: 4.9),
-    Restaurant(name: "Opa Greek Taverna", cuisine: "Greek", price: 2, badge: .blue, address: "606 Elm Ct", rating: 3.9),
-    Restaurant(name: "The Steakhouse Grill", cuisine: "Steakhouse", price: 3, badge: .green, address: "707 Maple Blvd", rating: 4.3)
+    Restaurant(name: "La Baguette Bistro", cuisine: "French", price: 2, badge: .red, address: "404 Oak Ln", rating: 4.4),
+    Restaurant(name: "Thai Spice Haven", cuisine: "Thai", price: 1, badge: .blue, address: "505 Pine Dr", rating: 4.9),
+    Restaurant(name: "Opa Greek Taverna", cuisine: "Greek", price: 2, badge: .green, address: "606 Elm Ct", rating: 3.9),
+    Restaurant(name: "The Steakhouse Grill", cuisine: "Steakhouse", price: 3, badge: .blue, address: "707 Maple Blvd", rating: 4.3)
 ]
 
 struct ContentView: View {
@@ -49,7 +49,6 @@ struct ContentView: View {
             Menu("Filter") {
                 Text("BADGE")
                 Text("PRICE")
-                Text("DISTANCE")
             }
             List {
                 ForEach(restaurants) { r in
