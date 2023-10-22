@@ -52,7 +52,12 @@ struct ContentView: View {
             }
             List {
                 ForEach(restaurants) { r in
-                    Text(r.name)
+                    HStack {
+                        Image(r.badge.rawValue)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text(r.name)
+                    }
                 }
             }
         }
