@@ -80,6 +80,7 @@ struct RestaurantRow: View {
 /** ContentView is the content that is shown, including logo, restaurant banner, filter, and list of restaurants. **/
 struct ContentView: View {
     @State private var showRecipesPageView = false
+    @State private var showEducationPageView = false
     
     var body: some View {
         NavigationView {
@@ -111,14 +112,14 @@ struct ContentView: View {
                     Button(action: { showRecipesPageView = true } ) {
                         Image(systemName: "frying.pan")
                     }
-                    
                     NavigationLink("", destination: RecipesPageView(), isActive: $showRecipesPageView)
                     
                     Spacer()
                     // Education
-                    Button(action: {} ) {
+                    Button(action: { showEducationPageView = true } ) {
                         Image(systemName: "lightbulb")
                     }
+                    NavigationLink("", destination: EducationPageView(), isActive: $showEducationPageView)
                     
                     Spacer()
                 }
