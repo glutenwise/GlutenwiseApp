@@ -79,6 +79,7 @@ struct RestaurantRow: View {
 
 /** ContentView is the content that is shown, including logo, restaurant banner, filter, and list of restaurants. **/
 struct ContentView: View {
+    @State private var showBadgeDescriptionModal = false
     @State private var showRecipesPageView = false
     @State private var showEducationPageView = false
     
@@ -86,10 +87,16 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Text("glutenwise LOGO")
-                Image("restaurant")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .scaledToFit()
+                Button(action: { showBadgeDescriptionModal.toggle() } ) {
+                    Image("restaurant")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .scaledToFit()
+                }
+                .sheet(isPresented: $showBadgeDescriptionModal) {
+                    BadgeDescriptionModal()
+                }
+                
                 Menu("Filter") {
                     Text("BADGE")
                     Text("PRICE")
