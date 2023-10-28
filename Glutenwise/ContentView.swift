@@ -80,24 +80,46 @@ struct RestaurantRow: View {
 /** ContentView is the content that is shown, including logo, restaurant banner, filter, and list of restaurants. **/
 struct ContentView: View {
     var body: some View {
-        
-        VStack {
-            Text("glutenwise LOGO")
-            Image("restaurant")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .scaledToFit()
-            Menu("Filter") {
-                Text("BADGE")
-                Text("PRICE")
-            }
-            List {
-                ForEach(restaurants) { r in
-                    RestaurantRow(restaurant: r)
+        TabView {
+            VStack {
+                Text("glutenwise LOGO")
+                Image("restaurant")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaledToFit()
+                Menu("Filter") {
+                    Text("BADGE")
+                    Text("PRICE")
+                }
+                List {
+                    ForEach(restaurants) { r in
+                        RestaurantRow(restaurant: r)
+                    }
+                }
+                
+                HStack {
+                    Spacer()
+                    // Restaurants
+                    Button(action: {} ) {
+                        Image(systemName: "location.magnifyingglass")
+                    }
+                    
+                    Spacer()
+                    // Recipes
+                    Button(action: {} ) {
+                        Image(systemName: "frying.pan")
+                    }
+                    
+                    Spacer()
+                    // Education
+                    Button(action: {} ) {
+                        Image(systemName: "lightbulb")
+                    }
+                    
+                    Spacer()
                 }
             }
         }
-
         
         ScrollViewReader { proxy in
             Text("Glutenwise")
