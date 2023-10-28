@@ -79,8 +79,10 @@ struct RestaurantRow: View {
 
 /** ContentView is the content that is shown, including logo, restaurant banner, filter, and list of restaurants. **/
 struct ContentView: View {
+    @State private var showRecipesPageView = false
+    
     var body: some View {
-        TabView {
+        NavigationView {
             VStack {
                 Text("glutenwise LOGO")
                 Image("restaurant")
@@ -106,9 +108,11 @@ struct ContentView: View {
                     
                     Spacer()
                     // Recipes
-                    Button(action: {} ) {
+                    Button(action: { showRecipesPageView = true } ) {
                         Image(systemName: "frying.pan")
                     }
+                    
+                    NavigationLink("", destination: RecipesPageView(), isActive: $showRecipesPageView)
                     
                     Spacer()
                     // Education
@@ -120,7 +124,6 @@ struct ContentView: View {
                 }
             }
         }
-        
     }
 }
 
