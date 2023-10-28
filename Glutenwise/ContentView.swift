@@ -44,7 +44,7 @@ let restaurants: [Restaurant] = [
 /** RestaurantRow formats how a row should look for a particular restaurant. **/
 struct RestaurantRow: View {
     let restaurant: Restaurant
-    @State private var rateGF = false
+    @State private var showRatingModal = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -54,10 +54,13 @@ struct RestaurantRow: View {
                     .font(.title3)
                     .fontWeight(.bold)
                 Spacer()
-                Button(action: { rateGF = true }) {
+                Button(action: { showRatingModal.toggle() }) {
                     Image(restaurant.badge.rawValue)
                         .resizable()
                         .frame(width: 30, height: 30)
+                }
+                .sheet(isPresented: $showRatingModal) {
+                    RatingModal()
                 }
             }
             

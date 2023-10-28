@@ -10,6 +10,7 @@
 		65566C172AED964400126CE2 /* RecipesPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65566C162AED964400126CE2 /* RecipesPageView.swift */; };
 		65566C192AED9F8F00126CE2 /* EducationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65566C182AED9F8F00126CE2 /* EducationPageView.swift */; };
 		65566C1B2AEDAE9800126CE2 /* BadgeDescriptionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65566C1A2AEDAE9800126CE2 /* BadgeDescriptionModal.swift */; };
+		65566C1D2AEDC1FA00126CE2 /* RatingModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65566C1C2AEDC1FA00126CE2 /* RatingModal.swift */; };
 		A1052D322AE34EE100A97B07 /* GlutenwiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1052D312AE34EE100A97B07 /* GlutenwiseApp.swift */; };
 		A1052D342AE34EE100A97B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1052D332AE34EE100A97B07 /* ContentView.swift */; };
 		A1052D362AE34EE300A97B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1052D352AE34EE300A97B07 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		65566C162AED964400126CE2 /* RecipesPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesPageView.swift; sourceTree = "<group>"; };
 		65566C182AED9F8F00126CE2 /* EducationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPageView.swift; sourceTree = "<group>"; };
 		65566C1A2AEDAE9800126CE2 /* BadgeDescriptionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDescriptionModal.swift; sourceTree = "<group>"; };
+		65566C1C2AEDC1FA00126CE2 /* RatingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModal.swift; sourceTree = "<group>"; };
 		A1052D2E2AE34EE100A97B07 /* Glutenwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glutenwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1052D312AE34EE100A97B07 /* GlutenwiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlutenwiseApp.swift; sourceTree = "<group>"; };
 		A1052D332AE34EE100A97B07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				A1052D312AE34EE100A97B07 /* GlutenwiseApp.swift */,
 				A1052D332AE34EE100A97B07 /* ContentView.swift */,
+				65566C1C2AEDC1FA00126CE2 /* RatingModal.swift */,
 				65566C1A2AEDAE9800126CE2 /* BadgeDescriptionModal.swift */,
 				65566C162AED964400126CE2 /* RecipesPageView.swift */,
 				65566C182AED9F8F00126CE2 /* EducationPageView.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				A1052D342AE34EE100A97B07 /* ContentView.swift in Sources */,
 				65566C192AED9F8F00126CE2 /* EducationPageView.swift in Sources */,
+				65566C1D2AEDC1FA00126CE2 /* RatingModal.swift in Sources */,
 				65566C172AED964400126CE2 /* RecipesPageView.swift in Sources */,
 				A1052D322AE34EE100A97B07 /* GlutenwiseApp.swift in Sources */,
 				65566C1B2AEDAE9800126CE2 /* BadgeDescriptionModal.swift in Sources */,
