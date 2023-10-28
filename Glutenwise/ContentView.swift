@@ -102,12 +102,6 @@ struct ContentView: View {
                 
                 HStack {
                     Spacer()
-                    // Restaurants
-                    Button(action: {} ) {
-                        Image(systemName: "location.magnifyingglass")
-                    }
-                    
-                    Spacer()
                     // Recipes
                     Button(action: { showRecipesPageView = true } ) {
                         Image(systemName: "frying.pan")
