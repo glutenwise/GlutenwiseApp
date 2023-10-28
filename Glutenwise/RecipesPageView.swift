@@ -15,18 +15,21 @@ struct RecipesPageView: View {
                 Image("food1Image")
                     .resizable()
                     .frame(width: 400, height: 450)
-                    .position(x: 180, y: -60)
                 Text("Grilled Chicken with Asparagus and Quinoa")
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.white)
-                    .position(x: 160, y: 110)
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                    .padding(.trailing,50)
+                    .padding(.top,350)
             }
 
 
                 Text("  Ingredients")
                     .font(.title)
                     .fontWeight(.semibold)
+                    .padding()
 
                 Text("""
                      - 1 pound chicken breast cut in strips
@@ -50,6 +53,7 @@ struct RecipesPageView: View {
                 Text("  Instructions")
                     .font(.title)
                     .fontWeight(.semibold)
+                    .padding()
 
                 Text("""
                 1.) In a bowl marinate chicken with salt, 1 teaspoon lemon juice and paprika. Set aside.
@@ -59,10 +63,11 @@ struct RecipesPageView: View {
                 5.) In a large bowl combine quinoa, chicken, asparagus, garlic, and mushrooms, Mix. Add fresh basil, lemon juice, and more oil if mixture is dry.
                 """)
                 .padding()
-
+                
                 Text("  Comments")
                     .font(.title)
                     .fontWeight(.semibold)
+                    .padding()
 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("  Anonymous User 191                       10/8/2023")
@@ -72,9 +77,8 @@ struct RecipesPageView: View {
                         .font(.caption)
                         .foregroundColor(Color.gray)
                 }
+                .padding()
             }
-
-            
         }
         }
     }
