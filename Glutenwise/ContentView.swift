@@ -87,7 +87,7 @@ struct RestaurantRow: View {
 /** ContentView is the content that is shown, including logo, restaurant banner, filter, and list of restaurants. **/
 struct ContentView: View {
     @State private var showBadgeDescriptionModal = false
-    @State private var showRecipesPageView = false
+    @State private var showRecipesHomePageView = false
     @State private var showEducationPageView = false
     
     var body: some View {
@@ -117,10 +117,10 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     // Recipes
-                    Button(action: { showRecipesPageView = true } ) {
+                    Button(action: { showRecipesHomePageView = true } ) {
                         Image(systemName: "frying.pan")
                     }
-                    NavigationLink("", destination: RecipesPageView(), isActive: $showRecipesPageView)
+                    NavigationLink("", destination: RecipesHomePageView(), isActive: $showRecipesHomePageView)
                     
                     Spacer()
                     // Education

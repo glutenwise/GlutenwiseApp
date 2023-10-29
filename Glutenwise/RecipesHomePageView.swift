@@ -8,11 +8,15 @@
 import SwiftUI
 //Sautéed Apples
 struct RecipesHomePageView: View {
+@State private var showBadgeDescriptionModal = false
+@State private var showRecipesHomePageView = false
+@State private var showEducationPageView = false
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
                 VStack(spacing: 20){
                 Text("glutenwise logo")
+                            //displays the banner for the page (greek stuffed pepprs)
                                     VStack(spacing:-30){
                                     Text("Trending")
                                             .font(.title)
@@ -31,6 +35,7 @@ struct RecipesHomePageView: View {
                                             .frame(width: 400, height: 100, alignment: .center)
                                     }
                                 }
+                //displays recipes in the popular recipes section in a horizontal row
                 Text("Popular Recipes")
                     .font(.title)
                     .fontWeight(.heavy)
@@ -74,6 +79,7 @@ struct RecipesHomePageView: View {
 
                     }
                 }
+                //displays recipes in the dinner delicacies section in a horizontal row
                     Text("Dinner Delicacies")
                     .font(.title)
                     .fontWeight(.heavy)
@@ -93,7 +99,7 @@ struct RecipesHomePageView: View {
                                             .frame(width: 200, height: 100, alignment: .center)
                     }
                                 VStack(spacing: -20) {
-                                                        NavigationLink(destination: RecipesPageView()) {
+                                    NavigationLink(destination: RecipesPageView()) {
                                                             Image("grilledChickenWithAsparagusandQuinoaImage")
                                                                 .resizable()
                                                                 .aspectRatio(contentMode: .fill)
@@ -120,7 +126,8 @@ struct RecipesHomePageView: View {
             }
                 }
                     }
-                    Text("Quick and Easy Recipes")
+                //displays the horizontal columns of recipes for the quick and easy recipes section
+                Text("Quick and Easy Recipes")
                     .font(.title)
                     .fontWeight(.heavy)
                     .padding(.trailing, 35.0)
@@ -164,13 +171,14 @@ struct RecipesHomePageView: View {
                 }
                         }
                     }
+//                //displays home bar for navigation purposes
 //                HStack {
 //                    Spacer()
 //                    // Recipes
-//                    Button(action: { showRecipesPageView = true } ) {
+//                    Button(action: { showRecipesHomePageView = true } ) {
 //                        Image(systemName: "frying.pan")
 //                    }
-//                    NavigationLink("", destination: RecipesPageView(), isActive: $showRecipesPageView)
+//                    NavigationLink("", destination: RecipesHomePageView(), isActive: $showRecipesHomePageView)
 //
 //                    Spacer()
 //                    // Education
@@ -180,7 +188,7 @@ struct RecipesHomePageView: View {
 //                    NavigationLink("", destination: EducationPageView(), isActive: $showEducationPageView)
 //
 //                    Spacer()
-//            }
+//                }
             }
         }
     }
