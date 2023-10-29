@@ -38,7 +38,7 @@ struct BadgeDescriptionModal: View {
                 Text("Extensive")
                     .font(.title2)
             }
-            Text("50% of their menu items are gluten-free or can be modified to be gluten-free.")
+            Text("At least 50% of their menu items are gluten-free or can be modified to be gluten-free.")
                 .padding([.leading, .trailing], 30)
             
             // Yellow Badge
