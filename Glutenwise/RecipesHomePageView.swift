@@ -14,15 +14,23 @@ struct RecipesHomePageView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(spacing: 20){
-                Text("glutenwise logo")
-                            //displays the banner for the page (greek stuffed pepprs)
-                                    VStack(spacing:-30){
-                                    Text("Trending")
+                VStack {
+                    Image("glutenwiseLogo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 170)
+                    Image("recipes")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .scaledToFit()
+                            //displays the banner for the page (greek stuffed peppers)
+                                    VStack {
+                                    Text("Trending Recipes")
                                             .font(.title)
                                             .fontWeight(.heavy)
-                                            .padding(.trailing, 35.0)
+                                            .padding()
                                             .multilineTextAlignment(.leading)
+                                            .padding(.bottom, -10)
                                         Image("greekStuffedPeppers")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
@@ -33,6 +41,7 @@ struct RecipesHomePageView: View {
                                             .fontWeight(.medium)
                                             .multilineTextAlignment(.center)
                                             .frame(width: 400, height: 100, alignment: .center)
+                                            .padding(.top,-35)
                                     }
                                 }
                 //displays recipes in the popular recipes section in a horizontal row

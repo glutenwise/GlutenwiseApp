@@ -9,8 +9,11 @@ struct RecipesPageView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
+                Image("glutenwiseLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 170)
             VStack(alignment: .leading, spacing: 10) {
-            Text("Glutenwise logo")
             ZStack {
                 Image("food1Image")
                     .resizable()

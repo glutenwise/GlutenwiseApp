@@ -93,7 +93,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("glutenwise LOGO")
+                Image("glutenwiseLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 170)
                 Button(action: { showBadgeDescriptionModal.toggle() } ) {
                     Image("restaurant")
                         .resizable()
@@ -104,10 +107,10 @@ struct ContentView: View {
                     BadgeDescriptionModal()
                 }
                 
-                Menu("Filter") {
-                    Text("BADGE")
-                    Text("PRICE")
-                }
+//                Menu("Filter") {
+//                    Text("BADGE")
+//                    Text("PRICE")
+//                }
                 List {
                     ForEach(restaurants) { r in
                         RestaurantRow(restaurant: r)
