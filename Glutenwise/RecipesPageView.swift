@@ -25,11 +25,11 @@ struct RecipesPageView: View {
                     .padding(.top,350)
             }
 
-
+                VStack(spacing:0){
                 Text("  Ingredients")
                     .font(.title)
                     .fontWeight(.semibold)
-                    .padding()
+                    .padding(.trailing, 165.0)
 
                 Text("""
                      - 1 pound chicken breast cut in strips
@@ -49,35 +49,51 @@ struct RecipesPageView: View {
                 """)
                 .multilineTextAlignment(.leading)
                 .padding()
-
+                VStack(spacing:-20){
                 Text("  Instructions")
                     .font(.title)
                     .fontWeight(.semibold)
-                    .padding()
+                    .padding(.trailing, 165.0)
+                }
 
                 Text("""
                 1.) In a bowl marinate chicken with salt, 1 teaspoon lemon juice and paprika. Set aside.
+                
                 2.) In a pot heat 1 tablespoon olive oil and add 2 cloves chopped garlic. Cook until just aromatic and add quinoa. Cook 1-2 minutes until lightly toasted. Add water. Bring to a boil. Reduce heat and simmer covered for 20 minutes or until cooked through.
+                
                 3.) In a pan heat 1 tablespoon olive oil and add mushrooms in a single layer. Do not crowd the pan and cook them in batches if you have to. Cook on each side until lightly browned and set aside. In the same pan heat 1 tablespoon olive oil and add chicken in a single layer. Cook until lightly browned on each side and remove.
+                
                 4.) To the same pan add asparagus and garlic. Add more oil if needed. Cook until asparagus is cooked through and lightly softened.
+                
                 5.) In a large bowl combine quinoa, chicken, asparagus, garlic, and mushrooms, Mix. Add fresh basil, lemon juice, and more oil if mixture is dry.
                 """)
-                .padding()
-                
-                Text("  Comments")
+                .frame(width: 335, height: 700, alignment: .center)
+                .padding(.leading, 30.0)
+                }
+                Text("Comments")
                     .font(.title)
                     .fontWeight(.semibold)
-                    .padding()
+                    .padding(.leading, 23.0)
 
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: 15) {
                     Text("  Anonymous User 191                       10/8/2023")
 
                     Text("   Wow! This perfect recipe is both healthy and delicious.")
                         .fontWeight(.light)
                         .font(.caption)
-                        .foregroundColor(Color.gray)
+                    Text("  FlyingRhino71                                   8/23/2023")
+
+                    Text("   I love that this recipe is gluten-free, yet doesn't skimp on flavor.")
+                        .fontWeight(.light)
+                        .font(.caption)
+                    Text("  CTom479                                           5/15/2023")
+
+                    Text("   I make this for dinner every week and I love it!")
+                        .fontWeight(.light)
+                        .font(.caption)
                 }
                 .padding()
+                
             }
         }
         }
