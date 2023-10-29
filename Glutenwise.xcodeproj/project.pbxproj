@@ -15,6 +15,7 @@
 		A1052D342AE34EE100A97B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1052D332AE34EE100A97B07 /* ContentView.swift */; };
 		A1052D362AE34EE300A97B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1052D352AE34EE300A97B07 /* Assets.xcassets */; };
 		A1052D392AE34EE300A97B07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1052D382AE34EE300A97B07 /* Preview Assets.xcassets */; };
+		A1ECC6C02AEEB66C0076711D /* RecipesHomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECC6BF2AEEB66C0076711D /* RecipesHomePageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A1052D332AE34EE100A97B07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1052D352AE34EE300A97B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1052D382AE34EE300A97B07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1ECC6BF2AEEB66C0076711D /* RecipesHomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesHomePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				A1052D312AE34EE100A97B07 /* GlutenwiseApp.swift */,
 				A1052D332AE34EE100A97B07 /* ContentView.swift */,
+				A1ECC6BF2AEEB66C0076711D /* RecipesHomePageView.swift */,
 				65566C1C2AEDC1FA00126CE2 /* RatingModal.swift */,
 				65566C1A2AEDAE9800126CE2 /* BadgeDescriptionModal.swift */,
 				65566C162AED964400126CE2 /* RecipesPageView.swift */,
@@ -155,6 +158,7 @@
 				65566C172AED964400126CE2 /* RecipesPageView.swift in Sources */,
 				A1052D322AE34EE100A97B07 /* GlutenwiseApp.swift in Sources */,
 				65566C1B2AEDAE9800126CE2 /* BadgeDescriptionModal.swift in Sources */,
+				A1ECC6C02AEEB66C0076711D /* RecipesHomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
