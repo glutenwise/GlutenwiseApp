@@ -28,7 +28,7 @@ enum BadgeType: String, CaseIterable {
 }
 
 /** Restaurants is a constant that defines many different restaurants with various attribute values. **/
-let restaurants: [Restaurant] = [
+var restaurants: [Restaurant] = [
     Restaurant(name: "Thai Spice Haven", cuisine: "Thai", price: 1, badge: .gray, address: "505 Pine Dr", rating: 4.9),
     Restaurant(name: "Pasta Paradise", cuisine: "Italian", price: 2, badge: .red, address: "123 Main St", rating: 4.5),
     Restaurant(name: "Taco Tango", cuisine: "Mexican", price: 3, badge: .green, address: "456 Elm St", rating: 4.2),
@@ -43,7 +43,7 @@ let restaurants: [Restaurant] = [
 
 /** RestaurantRow formats how a row should look for a particular restaurant. **/
 struct RestaurantRow: View {
-    let restaurant: Restaurant
+    @State var restaurant: Restaurant
     @State private var showRatingModal = false
     
     var body: some View {
@@ -60,7 +60,7 @@ struct RestaurantRow: View {
                         .frame(width: 30, height: 30)
                 }
                 .sheet(isPresented: $showRatingModal) {
-                    RatingModal()
+                    RatingModal(passedInRestaurant: restaurant)
                 }
             }
             
