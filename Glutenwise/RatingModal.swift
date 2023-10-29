@@ -11,7 +11,7 @@ struct RatingModal: View {
     @State var selectedBadgeType: BadgeType? = nil
     @State private var description: String = ""
     @Environment(\.dismiss) var dismiss
-    @State var passedInRestaurant: Restaurant
+    @Binding var passedInRestaurant: Restaurant
     
     var body: some View {
         VStack {
@@ -42,9 +42,11 @@ struct RatingModal: View {
                 .padding([.leading, .trailing], 50)
             
             Button("Submit") {
-                print("hello")
-                passedInRestaurant.badge = .blue
-                print("updatedRestaurant: \(passedInRestaurant)")
+                if selectedBadgeType != nil {
+                    passedInRestaurant.badge = selectedBadgeType!
+                } else {
+                    print("Error: must select a badge type")
+                }
                 dismiss()
             }
                 .buttonStyle(.borderedProminent)

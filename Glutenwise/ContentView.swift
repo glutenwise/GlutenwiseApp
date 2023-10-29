@@ -60,7 +60,7 @@ struct RestaurantRow: View {
                         .frame(width: 30, height: 30)
                 }
                 .sheet(isPresented: $showRatingModal) {
-                    RatingModal(passedInRestaurant: restaurant)
+                    RatingModal(passedInRestaurant: $restaurant)
                 }
             }
             
